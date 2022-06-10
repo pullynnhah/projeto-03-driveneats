@@ -1,0 +1,145 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
+}
+
+header {
+  height: 92px;
+  background-color: #cf2b2b;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+
+  padding-left: 21px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+h1 {
+  font: 44px/50px "Righteous", cursive;
+  margin-top: 8px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+main {
+  margin: 92px 0 108px;
+}
+
+h2 {
+  font: 26px/32px "Righteous", sans-serif;
+  margin: 0 0 17px 19px;
+  padding-top: 30px;
+  color: #333;
+}
+
+section {
+  overflow-x: scroll;
+  display: flex;
+  gap: 16px;
+  padding: 0 19px;
+}
+
+article {
+  width: 172px;
+  min-width: 172px;
+  height: 216px;
+  background-color: #fff;
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  padding: 18px 14px 13px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.chosen {
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25), inset 0 0 0 5px #32B72F;
+}
+
+.chosen ion-icon {
+  color: #32B72F;
+}
+
+img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333;
+}
+
+.desc {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #a6a6a6;
+}
+
+.price {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+ion-icon {
+  color: #fff;
+  font-size: 19px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+footer {
+  height: 92px;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+button {
+  height: 62px;
+  width: calc(100vw - 50px);
+  text-align: center;
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff;
+
+  font-weight: 700;
+  background-color: #32B72F;
+}
+
+button:disabled {
+  cursor: default;
+  background: #cbcbcb;
+  font-weight: 400;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button:disabled:hover {
+  cursor: default;
+  opacity: 1;
+}
