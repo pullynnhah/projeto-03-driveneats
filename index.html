@@ -30,7 +30,7 @@
     <main>
       <h2>Primeiro, seu prato</h2>
       <section class="dishes">
-        <article class="dish">
+        <article onclick="processFood(this)" class="dish">
           <img src="images/dishes/coxinha-capivara.jpeg" alt="coxinha em formato de capivara" />
           <h3>Coxivara</h3>
           <p class="desc">Uma delíciosa coxinha diferente</p>
@@ -38,7 +38,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="dish">
+        <article onclick="processFood(this)" class="dish">
           <img src="images/dishes/tapioca-frango.jpg" alt="" />
           <h3>Tapioca de Frango</h3>
           <p class="desc">Tapioca deliciosa de frango c/ catupiry</p>
@@ -46,7 +46,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="dish">
+        <article onclick="processFood(this)" class="dish">
           <img src="images/dishes/batatinha-enroladinha.jpg" alt="" />
           <h3>Batada Frita Curly</h3>
           <p class="desc">A batata frita tradicional divertida</p>
@@ -57,7 +57,7 @@
 
       <h2>Agora, sua bebida</h2>
       <section class="drinks">
-        <article class="drink">
+        <article onclick="processFood(this)" class="drink">
           <img src="images/drinks/coca-cola.jpg" alt="" />
           <h3>Coca-Cola</h3>
           <p class="desc">Aquela Coca bem geladinha</p>
@@ -65,7 +65,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="drink">
+        <article onclick="processFood(this)" class="drink">
           <img src="images/drinks/pepsi.jpeg" alt="" />
           <h3>Pepsi</h3>
           <p class="desc">Aquela Pepsi bem geladinha</p>
@@ -73,7 +73,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="drink">
+        <article onclick="processFood(this)" class="drink">
           <img src="images/drinks/fantas.jpeg" alt="dez latas de fanta" />
           <h3>Fanta Surpresa</h3>
           <p class="desc">10 opções para te surpreender</p>
@@ -84,7 +84,7 @@
 
       <h2>Por fim, sua sobremesa</h2>
       <section class="desserts">
-        <article class="dessert">
+        <article onclick="processFood(this)" class="dessert">
           <img src="images/desserts/cinnamon-roll.jpeg" alt="cinnamon roll" />
           <h3>Cinnamon Roll</h3>
           <p class="desc">Um rolinho de canela delicioso</p>
@@ -92,7 +92,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="dessert">
+        <article onclick="processFood(this)" class="dessert">
           <img src="images/desserts/pi-pie.jpg" alt="torta π" />
           <h3>π Pie</h3>
           <p class="desc">Para fãs de matemática</p>
@@ -100,7 +100,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </article>
 
-        <article class="dessert">
+        <article onclick="processFood(this)" class="dessert">
           <img src="images/desserts/bombom-morango-taca.jpg" alt="bombom de morango na taça" />
           <h3>Bombom na taça</h3>
           <p class="desc">Bombons e morangos para dois</p>
@@ -109,11 +109,40 @@
         </article>
       </section>
     </main>
-    <div class="modal-container">
-      <article class="modal"></article>
+    <div class="modal-container hidden">
+      <div class="modal">
+        <h4>Confirme seu pedido</h4>
+        <div class="meal">
+          <div class="dish">
+            <p class="title"></p>
+            <p class="price"></p>
+          </div>
+
+          <div class="drink">
+            <p class="title"></p>
+            <p class="price"></p>
+          </div>
+
+          <div class="dessert">
+            <p class="title"></p>
+            <p class="price"></p>
+          </div>
+
+          <div class="total">
+            <p>TOTAL</p>
+            <p>R$ <span></span></p>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="confirm-btn" onclick="placeOrder()">Tudo certo, pode pedir!</button>
+          <button class="cancel-btn" onclick="toggleModal()">Cancelar</button>
+        </div>
+      </div>
     </div>
     <footer>
-      <button disabled>Selecione os 3 itens<br />para fechar o pedido</button>
+      <button disabled class="order-btn" onclick="toggleModal()">
+        Selecione os 3 itens<br />para fechar o pedido
+      </button>
     </footer>
     <!-- scripts -->
     <script
